@@ -18,7 +18,7 @@ def get_lib_path():
     """Resolve library path"""
     machine = platform.machine().lower()
     system = platform.system().lower()
-    system_ext = {'windows': 'dll', 'darwin': 'dylib', 'linux': 'so'}
+    system_ext = {'windows': 'dll', 'darwin': 'dylib', 'linux': 'so', 'freebsd': 'so'}
     ext = system_ext.get(system, '')
 
     # Try to load binary for system and machine type
